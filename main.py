@@ -1,4 +1,4 @@
-""" import pandas as pd
+import pandas as pd
 import numpy as np
 import os
 from sklearn.model_selection import train_test_split
@@ -6,9 +6,11 @@ from tensorflow import keras
 import tensorflow as tf
 from PIL import Image
 import pickle
+import streamlit as st 
 
 # Data Cleaning
 print('Cleaning...')
+st.write('cleaning')
 without_mask = os.listdir('data/without_mask')
 with_mask = os.listdir('data/with_mask')
 
@@ -38,6 +40,7 @@ y = np.array(labels)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
 
 # training
+st.write('training')
 print('Training...')
 num_of_classes = 2
 
@@ -60,6 +63,7 @@ model.add(keras.layers.Dropout(0.5))
 model.add(keras.layers.Dense(num_of_classes, activation='sigmoid'))
 
 # compiling
+st.write('compiling')
 print('Compiling...')
 model.compile(
     optimizer='adam',
@@ -74,6 +78,6 @@ print('Saving...')
 pickle.dump(model, open('model.pkl','wb'))
 
 print('---------------completed--------------') 
-
-
-"""
+st.write('=-----------------complelted')
+def we():
+    return model.get_weights()
