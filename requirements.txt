@@ -1,4 +1,5 @@
 pickle5
+cython
 streamlit
 Pillow
 numpy
