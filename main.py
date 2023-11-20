@@ -1,4 +1,4 @@
-import pandas as pd
+""" import pandas as pd
 import numpy as np
 import os
 from sklearn.model_selection import train_test_split
@@ -73,4 +73,7 @@ model.fit(X_train, y_train, epochs=5)
 print('Saving...')
 pickle.dump(model, open('model.pkl','wb'))
 
-print('---------------completed--------------')
+print('---------------completed--------------') 
+
+
+"""
