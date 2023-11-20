@@ -3,7 +3,9 @@ import pickle
 import streamlit as st
 from PIL import Image
 import numpy as np
+import main
 
+we = main.we()
 
 def predictor(img_file):
     pil_img_file = Image.open(img_file)
@@ -14,6 +16,7 @@ def predictor(img_file):
 
 
 model = pickle.load(open('./model.pkl','rb'))
+model.set_weights(we)
 
 upload_file = st.file_uploader('Choose a file')
 if upload_file:
