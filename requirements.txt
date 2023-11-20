@@ -3,4 +3,4 @@ cython
 streamlit
 Pillow
 numpy
-numpy
+keras
